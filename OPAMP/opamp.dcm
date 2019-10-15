@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AD745
+D ultralow noise high speed bifet opamp
+$ENDCMP
+#
+$CMP tl2771
+D high slew-rate rail-to-rail output opamp with shutdown
+$ENDCMP
+#
+#End Doc Library
