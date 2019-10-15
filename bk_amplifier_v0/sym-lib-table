@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name opa132)(type Legacy)(uri ${KIPRJMOD}/opa132/opa132.lib)(options "")(descr ""))
 )

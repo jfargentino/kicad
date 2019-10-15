@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP OPA132
-D High speed FET-input operational amplifier
-F opa132.pdf
-$ENDCMP
-#
-#End Doc Library
