@@ -1,21 +1,29 @@
 .title B&K 8103 hydrophone and its wire model
 ********************************************************************************
+* 3.7nF 2.5GOhm with wire
+* 29uV/Pa (0.1pC/Pa)
+* TODO simulate it and check C/R values for resonance freq and/or band pass
+*      maybe a circuit topology could explain rx/tx assymetry ?
+********************************************************************************
 .subckt BK8103 1 2
 
 * signal due to the ceramic deformation
-Isignal 2 4 AC 100p
+* TODO transpose 0.1pC/Pa into a realistic current
+I1 2 3 AC 100pA
 
 * Equivalent capacitor of the ceramic
-Chydro 3 4 3.2n
+* given by C=Q/V and sensibility: 0.1pC/29uV = 3.448nF
+C1 2 3 3.5nF
 
 * Leakage resistor for the ceramic
-Rhydro 3 2 2.5G
-
-* Equivalent capacitor of the wire
-Cwire 3 2 500p
+R1 2 3 2.5G
 
 * Equivalent resistance of the wire
-Rwire 1 3 100m
+R2 3 1 100m
+
+* Equivalent capacitor of the wire
+* Given by datasheet value less C1
+C2 2 1 200pF
 
 ********************************************************************************
 .ends BK8103
