@@ -214,7 +214,7 @@ F 1 "Conn_Coaxial" H 4578 4697 50  0001 C CNN
 F 2 "" H 4650 4550 50  0001 C CNN
 F 3 " ~" H 4650 4550 50  0001 C CNN
 F 4 "X" H 4650 4550 50  0001 C CNN "Spice_Primitive"
-F 5 "BK8103" H 4650 4550 50  0001 C CNN "Spice_Model"
+F 5 "BK8103_V" H 4650 4550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4650 4550 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "bk8103.cir" H 4650 4550 50  0001 C CNN "Spice_Lib_File"
 	1    4650 4550
@@ -236,4 +236,6 @@ F 8 "5 3 13 6 12" H 6794 4559 50  0001 L CNN "Spice_Node_Sequence"
 	1    6450 4650
 	1    0    0    -1  
 $EndComp
+Text Notes 5450 5050 0    50   ~ 0
+REF: SLOA033a
 $EndSCHEMATC
