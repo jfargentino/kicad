@@ -18,8 +18,8 @@ $Comp
 L Device:R R2
 U 1 1 5DA0556F
 P 5300 4550
-F 0 "R2" V 5093 4550 50  0000 C CNN
-F 1 "470" V 5184 4550 50  0000 C CNN
+F 0 "R2" V 5500 4500 50  0000 L BNN
+F 1 "470" V 5400 4500 50  0000 L BNN
 F 2 "" V 5230 4550 50  0001 C CNN
 F 3 "~" H 5300 4550 50  0001 C CNN
 	1    5300 4550
@@ -41,7 +41,7 @@ L Device:C C1
 U 1 1 5DA06B13
 P 6500 3550
 F 0 "C1" V 6750 3550 50  0000 C CNN
-F 1 "370p" V 6650 3550 50  0000 C CNN
+F 1 "33p" V 6650 3550 50  0000 C CNN
 F 2 "" H 6538 3400 50  0001 C CNN
 F 3 "~" H 6500 3550 50  0001 C CNN
 	1    6500 3550
@@ -78,12 +78,12 @@ F 3 "" H 4650 4750 50  0001 C CNN
 	1    4650 4750
 	-1   0    0    -1  
 $EndComp
-Text Notes 6650 3500 0    50   ~ 0
-gain is given by Cin/C1\nC1 in polystyren
+Text Notes 5900 3150 0    50   ~ 0
+Voltage gain is given by Chydro/C1\nCharge gain is given by 1/C1, in Coulomb per Volt\nC1 should be in polystyren
 Text Notes 5950 3800 0    50   ~ 0
 low freq given by 1/2*pi*R1*C1
-Text Notes 4450 4350 0    50   ~ 0
-high freq given by 1/2*pi*R2*Cin
+Text Notes 4500 4250 0    50   ~ 0
+high freq given by 1/2*pi*R2*Chydro
 $Comp
 L pspice:VSOURCE V1
 U 1 1 5DA46F3A
@@ -127,15 +127,12 @@ Wire Wire Line
 Wire Wire Line
 	5300 3200 5300 3250
 Wire Wire Line
-	4650 4750 6150 4750
-Wire Wire Line
 	5950 4550 6150 4550
 Connection ~ 5950 4550
 Wire Wire Line
 	6750 4650 7200 4650
 Wire Wire Line
 	4850 4550 5000 4550
-Connection ~ 4650 4750
 $Comp
 L Connector:Conn_Coaxial J2
 U 1 1 5DA6E956
@@ -145,7 +142,7 @@ F 1 "Conn_Coaxial" H 7600 4534 50  0001 L CNN
 F 2 "" H 7500 4650 50  0001 C CNN
 F 3 " ~" H 7500 4650 50  0001 C CNN
 F 4 "R" H 7500 4650 50  0001 C CNN "Spice_Primitive"
-F 5 "10k" H 7500 4650 50  0001 C CNN "Spice_Model"
+F 5 "100k" H 7500 4650 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 7500 4650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    7500 4650
 	1    0    0    -1  
@@ -234,8 +231,26 @@ F 6 "Y" H 6550 4500 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "OPAMP\\ad745\\ad745.cir" H 6550 4500 50  0001 C CNN "Spice_Lib_File"
 F 8 "5 3 13 6 12" H 6794 4559 50  0001 L CNN "Spice_Node_Sequence"
 	1    6450 4650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
-Text Notes 5450 5050 0    50   ~ 0
+Text Notes 6050 6050 0    50   ~ 0
 REF: SLOA033a
+$Comp
+L Device:R R3
+U 1 1 5DA73A7D
+P 5300 4750
+F 0 "R3" V 5500 4750 50  0000 C CNN
+F 1 "470" V 5400 4750 50  0000 C CNN
+F 2 "" V 5230 4750 50  0001 C CNN
+F 3 "~" H 5300 4750 50  0001 C CNN
+	1    5300 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 4750 6150 4750
+Wire Wire Line
+	5150 4750 4650 4750
+Connection ~ 4650 4750
+Text Notes 4800 5200 0    50   ~ 0
+R3 = R2 to minimize offset error\ndue to input bias current
 $EndSCHEMATC

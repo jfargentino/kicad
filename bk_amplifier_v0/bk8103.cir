@@ -37,7 +37,7 @@ C2 2 1 200pF
 
 * signal due to the ceramic deformation
 * for a SPL of 60dB(1uPa),  given the sensitivity, we should have 29nV
-V1 2 4 DC 0 AC 30nV
+V1 4 2 DC 0 AC 30nV
 
 * Equivalent capacitor of the ceramic
 * given by C=Q/V and sensibility: 0.1pC/29uV = 3.448nF

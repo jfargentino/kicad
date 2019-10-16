@@ -2,11 +2,11 @@
 .include "OPAMP/ad745/ad745.cir"
 .include "bk8103.cir"
 R2 retro in 470
-R1 out retro 5Meg
-C1 out retro 370p
+R1 out retro 1Meg
+C1 out retro 330p
 V1 Vcc GND 12
 V2 GND Vee 12
 RJ2 out GND 10k
 XJ1 in GND BK8103_V
-XU1 retro GND Vee Vcc out AD745
+XU1 GND retro Vcc Vee out AD745
 .end
