@@ -126,21 +126,6 @@ Wire Wire Line
 	4850 3200 4850 3150
 Wire Wire Line
 	5300 3200 5300 3250
-$Comp
-L bk_amplifier-rescue:AD745-opamp U1
-U 1 1 5DA595E3
-P 6450 4650
-F 0 "U1" H 6794 4696 50  0000 L CNN
-F 1 "AD745" H 6794 4605 50  0000 L CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 6750 4400 50  0001 C CNN
-F 3 "" H 6750 4400 50  0001 C CNN
-F 4 "X" H 6550 4500 50  0001 C CNN "Spice_Primitive"
-F 5 "AD745" H 6550 4500 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6550 4500 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "bk_amplifier-cache.lib" H 6550 4500 50  0001 C CNN "Spice_Lib_File"
-	1    6450 4650
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	4650 4750 6150 4750
 Wire Wire Line
@@ -169,10 +154,10 @@ Wire Wire Line
 	7300 4650 7250 4650
 Connection ~ 7200 4650
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 5DA6EEA2
 P 7500 5000
-F 0 "#PWR?" H 7500 4750 50  0001 C CNN
+F 0 "#PWR0103" H 7500 4750 50  0001 C CNN
 F 1 "GND" H 7505 4827 50  0000 C CNN
 F 2 "" H 7500 5000 50  0001 C CNN
 F 3 "" H 7500 5000 50  0001 C CNN
@@ -234,5 +219,21 @@ F 6 "Y" H 4650 4550 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "bk8103.cir" H 4650 4550 50  0001 C CNN "Spice_Lib_File"
 	1    4650 4550
 	-1   0    0    -1  
+$EndComp
+$Comp
+L opamp:AD745 U1
+U 1 1 5DA6D311
+P 6450 4650
+F 0 "U1" H 6450 4450 50  0000 L CNN
+F 1 "AD745" H 6450 4850 50  0000 L CNN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 6750 4400 50  0001 C CNN
+F 3 "OPAMP\\ad745\\AD745.pdf" H 6750 4400 50  0001 C CNN
+F 4 "X" H 6550 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "AD745" H 6550 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6550 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "OPAMP\\ad745\\ad745.cir" H 6550 4500 50  0001 C CNN "Spice_Lib_File"
+F 8 "5 3 13 6 12" H 6794 4559 50  0001 L CNN "Spice_Node_Sequence"
+	1    6450 4650
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

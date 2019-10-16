@@ -71,7 +71,8 @@ F3 "" 300 -250 50 H I C CNN
 F4 "X" 100 -150 50 H I C CNN "Spice_Primitive"
 F5 "AD745" 100 -150 50 H I C CNN "Spice_Model"
 F6 "Y" 100 -150 50 H I C CNN "Spice_Netlist_Enabled"
-F7 "ad745\\ad745.cir" 100 -150 50 H I C CNN "Spice_Lib_File"
+F7 "OPAMP\\ad745\\ad745.cir" 100 -150 50 H I C CNN "Spice_Lib_File"
+F8 "5 3 13 6 12" 100 -150 50 H I C CNN "Spice_Node_Sequence"
 DRAW
 P 4 1 1 10 -200 200 200 0 -200 -200 -200 200 f
 X ~ 12 300 0 100 L 50 50 1 1 O
