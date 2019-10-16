@@ -78,7 +78,7 @@ F 3 "" H 4650 4750 50  0001 C CNN
 	1    4650 4750
 	-1   0    0    -1  
 $EndComp
-Text Notes 5900 3150 0    50   ~ 0
+Text Notes 5800 3150 0    50   ~ 0
 Voltage gain is given by Chydro/C1\nCharge gain is given by 1/C1, in Coulomb per Volt\nC1 should be in polystyren
 Text Notes 5950 3800 0    50   ~ 0
 low freq given by 1/2*pi*R1*C1
