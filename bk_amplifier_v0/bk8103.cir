@@ -1,7 +1,8 @@
 .title B&K 8103 hydrophone and its wire models
 ********************************************************************************
 * 3.7nF 2.5GOhm with wire
-* 29uV/Pa (0.1pC/Pa)
+* sensitivity -211dB 1V/uPa <-> 29uV/Pa <-> 0.1pC/Pa
+*
 * TODO simulate it and check C/R values for resonance freq and/or band pass
 *      maybe a circuit topology could explain rx/tx assymetry ?
 ********************************************************************************
@@ -35,8 +36,8 @@ C2 2 1 200pF
 .subckt BK8103_V 1 2
 
 * signal due to the ceramic deformation
-* TODO transpose 29uV/Pa into a realistic voltage
-V1 2 4 DC 0 AC 1uV
+* for a SPL of 60dB(1uPa),  given the sensitivity, we should have 29nV
+V1 2 4 DC 0 AC 30nV
 
 * Equivalent capacitor of the ceramic
 * given by C=Q/V and sensibility: 0.1pC/29uV = 3.448nF
