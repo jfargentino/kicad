@@ -1,0 +1,14 @@
+.title AD745 Output Impedance in Closed-Loop
+
+.include "OPAMP/ad745/ad745.cir"
+
+V1 Vs+ GND 15
+V2 GND Vs- 15
+
+* Closed-loop 5
+XU1 GND neg1 Vs+ Vs- out1 AD745
+I1 out1 GND dc 0 ac 1
+R1 neg1 GND 1k
+R2 out1 neg1 5k
+
+.end

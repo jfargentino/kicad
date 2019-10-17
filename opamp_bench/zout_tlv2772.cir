@@ -1,0 +1,29 @@
+.title TLV2772 Output Impedance in Closed-Loop
+
+* Does not match datasheet:
+* spice says impedance start rising around 100Hz when it more 1kHz
+* spice gives 10 times lower impedances 
+
+.include "OPAMP/tlv2772/tlv2772.cir"
+
+V1 Vdd GND 2.7
+
+* Closed-loop 0dB
+XU1 GND neg1 Vdd GND out1 TLV2772
+I1 out1 GND dc 0 ac 1
+R1 neg1 GND 1k
+R2 out1 neg1 1k
+
+* Closed-loop 20dB
+XU2 GND neg2 Vdd GND out2 TLV2772
+I2 out2 GND dc 0 ac 1
+R3 neg2 GND 1k
+R4 out2 neg2 10k
+
+* Closed-loop 40dB
+XU3 GND neg3 Vdd GND out3 TLV2772
+I3 out3 GND dc 0 ac 1
+R5 neg3 GND 1k
+R6 out3 neg3 100k
+
+.end

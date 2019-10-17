@@ -1,4 +1,4 @@
-update=17/10/2019 08:47:31
+update=17/10/2019 11:27:07
 version=1
 last_client=kicad
 [general]
@@ -38,6 +38,6 @@ PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Spice
-SpiceAjustPassiveValues=0
+SpiceAjustPassiveValues=1
 LabSize=50
 ERC_TestSimilarLabels=1

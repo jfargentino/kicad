@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name opamp)(type Legacy)(uri C:/Users/stage03/Desktop/kicad_git/opamp_bench/OPAMP/opamp.lib)(options "")(descr ""))
+)

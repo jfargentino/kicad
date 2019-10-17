@@ -166,12 +166,9 @@ Wire Wire Line
 Text GLabel 7300 4450 2    50   Output ~ 0
 out
 Text GLabel 4850 4400 0    50   Input ~ 0
-in
-Text GLabel 5850 3550 0    50   BiDi ~ 0
-retro
-Wire Wire Line
-	5850 3550 5950 3550
-Connection ~ 5950 3550
+hydro
+Text GLabel 5950 4550 3    50   Input ~ 0
+neg
 Wire Wire Line
 	4850 4400 5000 4400
 Wire Wire Line
@@ -211,7 +208,7 @@ F 1 "Conn_Coaxial" H 4578 4697 50  0001 C CNN
 F 2 "" H 4650 4550 50  0001 C CNN
 F 3 "doc/BK810x.pdf" H 4650 4550 50  0001 C CNN
 F 4 "X" H 4650 4550 50  0001 C CNN "Spice_Primitive"
-F 5 "BK8103_V" H 4650 4550 50  0001 C CNN "Spice_Model"
+F 5 "BK8103_x" H 4650 4550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4650 4550 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "bk8103.cir" H 4650 4550 50  0001 C CNN "Spice_Lib_File"
 	1    4650 4550
@@ -253,4 +250,8 @@ Wire Wire Line
 Connection ~ 4650 4750
 Text Notes 4800 5200 0    50   ~ 0
 R3 = R2 to minimize offset error\ndue to input bias current
+Text GLabel 5950 4750 3    50   Input ~ 0
+pos
+Text Notes 6700 5000 0    50   ~ 0
+.tran 1n 1m
 $EndSCHEMATC
