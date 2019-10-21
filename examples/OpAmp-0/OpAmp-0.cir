@@ -1,0 +1,9 @@
+.title KiCad schematic
+.include "OPA211.LIB"
+V2 Vcc GND DC 9
+V3 GND Vee DC 9
+XU1 in2 out Vcc Vee out OPA211
+V1 in1 GND dc 0 ac 1m
+R1 in2 in1 50
+.noise V(out) V1 dec 100 1m 1Meg
+.end

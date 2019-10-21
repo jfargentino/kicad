@@ -1,0 +1,36 @@
+.title KiCad schematic
+Rlplz1 LowPass_LowZ In 1
+Clplz1 LowPass_LowZ GND 33u
+Lhplz1 HighPass_LowZ GND 33u
+V1 In GND trrandom(2 1 0 1)
+Rhplz1 HighPass_LowZ In 1
+Llphz1 LowPass_HighZ In 3.3m
+Rlphz1 LowPass_HighZ GND 100
+Clp2lz1 LowPass2_LowZ GND 33u
+Llp2lz1 LowPass2_LowZ In 33u
+Lhp2lz1 HighPass2_LowZ GND 33u
+Chp2lz1 HighPass2_LowZ In 33u
+Clp2hz1 LowPass2_HighZ GND 330n
+Llp2hz1 LowPass2_HighZ In 3.3m
+Lhp2hz1 HighPass2_HighZ GND 3.3m
+Chp2hz1 HighPass2_HighZ In 330n
+Lbp1 BandPass1 GND 33u
+Cbp1 in1 GND 33u
+Rbp1 BandPass1 in1 1
+Rbp2 in1 In 1
+Lbp2 BandPass2 in2 3.3m
+Cbp2 in2 In 33u
+Rbp3 GND in2 1
+Rbp4 GND BandPass2 100
+Cbp4 in3 GND 33u
+Chphz1 HighPass_HighZ In 330n
+Rhphz1 HighPass_HighZ GND 100
+Rbp6 BandPass3 GND 100
+Cbp3 BandPass3 in3 330n
+Rbp5 in3 In 1
+Rbp7 BandPass4 GND 1
+Rbp8 in4 In 1
+Cbp5 BandPass4 in4 33u
+Cbp6 in4 GND 33u
+.tran 100n 4.5m
+.end

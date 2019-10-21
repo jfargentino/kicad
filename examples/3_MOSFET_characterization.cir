@@ -1,0 +1,13 @@
+.title 21.3 MOSFET Characterization
+
+.option NODE NOPAGE
+
+VDS 3 0
+VGS 2 0
+M1 1 2 0 MOD1 L=4u W=6u AD=10p AS=10p
+VIDS 3 1
+.model MOD1 NMOS VTO=-2 NSUB=1e15 U0=550
+.dc VDS 0 10 .5 VGS 0 5 1
+
+.end
+

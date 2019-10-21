@@ -1,0 +1,21 @@
+.title B&K8103 as projector
+.include "bk8103.cir"
+
+* hydro
+*C1 Hydro GND 3.5nF
+*R1 Hydro GND 2.5G
+* wire
+*C2 Hydro GND 100pF
+*R2 Sig Hydro 100m
+*C3 Sig GND 100pF
+
+R2 H GND 2.5G
+C1 H GND 3.5nF
+R1 Sig H 2.5k
+
+* signal
+V1 Hydro GND dc 0 ac 1
+* V1 Sig GND dc 0 ac 1 sin(0 1 1k)
+* V1 Sig GND pulse(0 1 1u 1u 1u 100u 300u
+
+.end

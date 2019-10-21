@@ -1,0 +1,747 @@
+EESchema Schematic File Version 4
+LIBS:filters-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R Rlplz1
+U 1 1 5DA9D6C6
+P 1200 2400
+F 0 "Rlplz1" V 993 2400 50  0000 C CNN
+F 1 "1" V 1084 2400 50  0000 C CNN
+F 2 "" V 1130 2400 50  0001 C CNN
+F 3 "~" H 1200 2400 50  0001 C CNN
+	1    1200 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C Clplz1
+U 1 1 5DA9D891
+P 1400 2600
+F 0 "Clplz1" H 1515 2646 50  0000 L CNN
+F 1 "33u" H 1515 2555 50  0000 L CNN
+F 2 "" H 1438 2450 50  0001 C CNN
+F 3 "~" H 1400 2600 50  0001 C CNN
+	1    1400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5DA9DDDC
+P 1400 2750
+F 0 "#PWR0101" H 1400 2500 50  0001 C CNN
+F 1 "GND" H 1405 2577 50  0000 C CNN
+F 2 "" H 1400 2750 50  0001 C CNN
+F 3 "" H 1400 2750 50  0001 C CNN
+	1    1400 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1000 2400 0    50   Input ~ 0
+In
+Text GLabel 1550 2400 2    50   Output ~ 0
+LowPass_LowZ
+Wire Wire Line
+	1350 2400 1400 2400
+Wire Wire Line
+	1400 2450 1400 2400
+Connection ~ 1400 2400
+$Comp
+L power:GND #PWR0104
+U 1 1 5DAA1BB4
+P 1400 3800
+F 0 "#PWR0104" H 1400 3550 50  0001 C CNN
+F 1 "GND" H 1405 3627 50  0000 C CNN
+F 2 "" H 1400 3800 50  0001 C CNN
+F 3 "" H 1400 3800 50  0001 C CNN
+	1    1400 3800
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1500 3450 2    50   Output ~ 0
+HighPass_LowZ
+Text GLabel 900  3450 0    50   Input ~ 0
+In
+Wire Wire Line
+	1400 3500 1400 3450
+$Comp
+L Device:L Lhplz1
+U 1 1 5DAA1BC1
+P 1400 3650
+F 0 "Lhplz1" H 1356 3696 50  0000 R CNN
+F 1 "33u" H 1356 3605 50  0000 R CNN
+F 2 "" H 1400 3650 50  0001 C CNN
+F 3 "~" H 1400 3650 50  0001 C CNN
+	1    1400 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5DAA25A4
+P 3700 1500
+F 0 "V1" H 3928 1546 50  0000 L CNN
+F 1 "trrandom(2 1 0 1)" H 3928 1455 50  0000 L CNN
+F 2 "" H 3700 1500 50  0001 C CNN
+F 3 "~" H 3700 1500 50  0001 C CNN
+	1    3700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5DAA28DC
+P 3700 1800
+F 0 "#PWR0105" H 3700 1550 50  0001 C CNN
+F 1 "GND" H 3705 1627 50  0000 C CNN
+F 2 "" H 3700 1800 50  0001 C CNN
+F 3 "" H 3700 1800 50  0001 C CNN
+	1    3700 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3800 1100 2    50   Output ~ 0
+In
+Wire Wire Line
+	3800 1100 3700 1100
+Wire Wire Line
+	3700 1100 3700 1200
+Text Notes 3450 2200 0    50   ~ 0
+.tran 100n 4.5m
+Wire Wire Line
+	1000 2400 1050 2400
+Connection ~ 1400 3450
+Wire Wire Line
+	1400 2400 1550 2400
+Wire Wire Line
+	1000 3450 900  3450
+Wire Wire Line
+	1300 3450 1400 3450
+$Comp
+L Device:R Rhplz1
+U 1 1 5DAB3C92
+P 1150 3450
+F 0 "Rhplz1" V 943 3450 50  0000 C CNN
+F 1 "1" V 1034 3450 50  0000 C CNN
+F 2 "" V 1080 3450 50  0001 C CNN
+F 3 "~" H 1150 3450 50  0001 C CNN
+	1    1150 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 3450 1500 3450
+Wire Wire Line
+	5050 5550 5200 5550
+Wire Wire Line
+	5200 5550 5200 5650
+$Comp
+L power:GND #PWR0102
+U 1 1 5DAD8BD7
+P 5200 5950
+F 0 "#PWR0102" H 5200 5700 50  0001 C CNN
+F 1 "GND" H 5205 5777 50  0000 C CNN
+F 2 "" H 5200 5950 50  0001 C CNN
+F 3 "" H 5200 5950 50  0001 C CNN
+	1    5200 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 5400 5550 2    50   Output ~ 0
+BandPass3
+Wire Wire Line
+	5400 5550 5200 5550
+Connection ~ 5200 5550
+Text GLabel 2800 2550 0    50   Input ~ 0
+In
+Text GLabel 3550 2550 2    50   Output ~ 0
+LowPass_HighZ
+$Comp
+L Device:L Llphz1
+U 1 1 5DADA66D
+P 3050 2550
+F 0 "Llphz1" V 2869 2550 50  0000 C CNN
+F 1 "3.3m" V 2960 2550 50  0000 C CNN
+F 2 "" H 3050 2550 50  0001 C CNN
+F 3 "~" H 3050 2550 50  0001 C CNN
+	1    3050 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 2550 2900 2550
+Wire Wire Line
+	3200 2550 3350 2550
+$Comp
+L Device:R Rlphz1
+U 1 1 5DADD8AB
+P 3350 2750
+F 0 "Rlphz1" H 3420 2796 50  0000 L CNN
+F 1 "100" H 3420 2705 50  0000 L CNN
+F 2 "" V 3280 2750 50  0001 C CNN
+F 3 "~" H 3350 2750 50  0001 C CNN
+	1    3350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5DADD8B1
+P 3350 2900
+F 0 "#PWR0103" H 3350 2650 50  0001 C CNN
+F 1 "GND" H 3355 2727 50  0000 C CNN
+F 2 "" H 3350 2900 50  0001 C CNN
+F 3 "" H 3350 2900 50  0001 C CNN
+	1    3350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2550 3350 2600
+Connection ~ 3350 2550
+Wire Wire Line
+	3350 2550 3550 2550
+$Comp
+L Device:C Clp2lz1
+U 1 1 5DADEF6F
+P 5250 2700
+F 0 "Clp2lz1" H 5365 2746 50  0000 L CNN
+F 1 "33u" H 5365 2655 50  0000 L CNN
+F 2 "" H 5288 2550 50  0001 C CNN
+F 3 "~" H 5250 2700 50  0001 C CNN
+	1    5250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5DADEF75
+P 5250 2850
+F 0 "#PWR0106" H 5250 2600 50  0001 C CNN
+F 1 "GND" H 5255 2677 50  0000 C CNN
+F 2 "" H 5250 2850 50  0001 C CNN
+F 3 "" H 5250 2850 50  0001 C CNN
+	1    5250 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 4850 2500 0    50   Input ~ 0
+In
+Text GLabel 5400 2500 2    50   Output ~ 0
+LowPass2_LowZ
+Wire Wire Line
+	5200 2500 5250 2500
+Wire Wire Line
+	5250 2550 5250 2500
+Connection ~ 5250 2500
+Wire Wire Line
+	4850 2500 4900 2500
+Wire Wire Line
+	5250 2500 5400 2500
+$Comp
+L Device:L Llp2lz1
+U 1 1 5DADF51C
+P 5050 2500
+F 0 "Llp2lz1" V 4869 2500 50  0000 C CNN
+F 1 "33u" V 4960 2500 50  0000 C CNN
+F 2 "" H 5050 2500 50  0001 C CNN
+F 3 "~" H 5050 2500 50  0001 C CNN
+	1    5050 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5DAE18A9
+P 5050 3850
+F 0 "#PWR0107" H 5050 3600 50  0001 C CNN
+F 1 "GND" H 5055 3677 50  0000 C CNN
+F 2 "" H 5050 3850 50  0001 C CNN
+F 3 "" H 5050 3850 50  0001 C CNN
+	1    5050 3850
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5250 3500 2    50   Output ~ 0
+HighPass2_LowZ
+Wire Wire Line
+	5050 3550 5050 3500
+$Comp
+L Device:L Lhp2lz1
+U 1 1 5DAE18B2
+P 5050 3700
+F 0 "Lhp2lz1" H 5006 3746 50  0000 R CNN
+F 1 "33u" H 5006 3655 50  0000 R CNN
+F 2 "" H 5050 3700 50  0001 C CNN
+F 3 "~" H 5050 3700 50  0001 C CNN
+	1    5050 3700
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5050 3500
+Wire Wire Line
+	4650 3500 4600 3500
+Wire Wire Line
+	4950 3500 5050 3500
+Wire Wire Line
+	5050 3500 5250 3500
+$Comp
+L Device:C Chp2lz1
+U 1 1 5DAE1E6A
+P 4800 3500
+F 0 "Chp2lz1" V 4548 3500 50  0000 C CNN
+F 1 "33u" V 4639 3500 50  0000 C CNN
+F 2 "" H 4838 3350 50  0001 C CNN
+F 3 "~" H 4800 3500 50  0001 C CNN
+	1    4800 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C Clp2hz1
+U 1 1 5DAE6596
+P 6900 2750
+F 0 "Clp2hz1" H 7015 2796 50  0000 L CNN
+F 1 "330n" H 7015 2705 50  0000 L CNN
+F 2 "" H 6938 2600 50  0001 C CNN
+F 3 "~" H 6900 2750 50  0001 C CNN
+	1    6900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5DAE659C
+P 6900 2900
+F 0 "#PWR0108" H 6900 2650 50  0001 C CNN
+F 1 "GND" H 6905 2727 50  0000 C CNN
+F 2 "" H 6900 2900 50  0001 C CNN
+F 3 "" H 6900 2900 50  0001 C CNN
+	1    6900 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6400 2550 0    50   Input ~ 0
+In
+Text GLabel 7050 2550 2    50   Output ~ 0
+LowPass2_HighZ
+Wire Wire Line
+	6850 2550 6900 2550
+Wire Wire Line
+	6900 2600 6900 2550
+Connection ~ 6900 2550
+Wire Wire Line
+	6400 2550 6550 2550
+Wire Wire Line
+	6900 2550 7050 2550
+$Comp
+L Device:L Llp2hz1
+U 1 1 5DAE65A9
+P 6700 2550
+F 0 "Llp2hz1" V 6519 2550 50  0000 C CNN
+F 1 "3.3m" V 6610 2550 50  0000 C CNN
+F 2 "" H 6700 2550 50  0001 C CNN
+F 3 "~" H 6700 2550 50  0001 C CNN
+	1    6700 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5DAEADE4
+P 6800 3800
+F 0 "#PWR0109" H 6800 3550 50  0001 C CNN
+F 1 "GND" H 6805 3627 50  0000 C CNN
+F 2 "" H 6800 3800 50  0001 C CNN
+F 3 "" H 6800 3800 50  0001 C CNN
+	1    6800 3800
+	-1   0    0    -1  
+$EndComp
+Text GLabel 6950 3450 2    50   Output ~ 0
+HighPass2_HighZ
+Text GLabel 6300 3450 0    50   Input ~ 0
+In
+Wire Wire Line
+	6800 3500 6800 3450
+$Comp
+L Device:L Lhp2hz1
+U 1 1 5DAEADED
+P 6800 3650
+F 0 "Lhp2hz1" H 6756 3696 50  0000 R CNN
+F 1 "3.3m" H 6756 3605 50  0000 R CNN
+F 2 "" H 6800 3650 50  0001 C CNN
+F 3 "~" H 6800 3650 50  0001 C CNN
+	1    6800 3650
+	-1   0    0    -1  
+$EndComp
+Connection ~ 6800 3450
+Wire Wire Line
+	6400 3450 6300 3450
+Wire Wire Line
+	6700 3450 6800 3450
+Wire Wire Line
+	6800 3450 6950 3450
+$Comp
+L Device:C Chp2hz1
+U 1 1 5DAEADF7
+P 6550 3450
+F 0 "Chp2hz1" V 6298 3450 50  0000 C CNN
+F 1 "330n" V 6389 3450 50  0000 C CNN
+F 2 "" H 6588 3300 50  0001 C CNN
+F 3 "~" H 6550 3450 50  0001 C CNN
+	1    6550 3450
+	0    1    1    0   
+$EndComp
+Text GLabel 4100 4800 2    50   Output ~ 0
+BandPass1
+Text GLabel 2900 4800 0    50   Input ~ 0
+In
+Wire Wire Line
+	3700 4850 3700 4800
+$Comp
+L Device:L Lbp1
+U 1 1 5DB22991
+P 3700 5000
+F 0 "Lbp1" H 3656 5046 50  0000 R CNN
+F 1 "33u" H 3656 4955 50  0000 R CNN
+F 2 "" H 3700 5000 50  0001 C CNN
+F 3 "~" H 3700 5000 50  0001 C CNN
+	1    3700 5000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C Cbp1
+U 1 1 5DB22998
+P 3400 5000
+F 0 "Cbp1" H 3515 5046 50  0000 L CNN
+F 1 "33u" H 3515 4955 50  0000 L CNN
+F 2 "" H 3438 4850 50  0001 C CNN
+F 3 "~" H 3400 5000 50  0001 C CNN
+	1    3400 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5150 3550 5150
+Wire Wire Line
+	3700 4800 4100 4800
+$Comp
+L power:GND #PWR0110
+U 1 1 5DB3BC11
+P 3550 5150
+F 0 "#PWR0110" H 3550 4900 50  0001 C CNN
+F 1 "GND" H 3555 4977 50  0000 C CNN
+F 2 "" H 3550 5150 50  0001 C CNN
+F 3 "" H 3550 5150 50  0001 C CNN
+	1    3550 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 5150
+Wire Wire Line
+	3550 5150 3700 5150
+$Comp
+L Device:R Rbp1
+U 1 1 5DB3C9BA
+P 3550 4800
+F 0 "Rbp1" V 3343 4800 50  0000 C CNN
+F 1 "1" V 3434 4800 50  0000 C CNN
+F 2 "" V 3480 4800 50  0001 C CNN
+F 3 "~" H 3550 4800 50  0001 C CNN
+	1    3550 4800
+	0    1    1    0   
+$EndComp
+Connection ~ 3700 4800
+$Comp
+L Device:R Rbp2
+U 1 1 5DB3F07A
+P 3150 4800
+F 0 "Rbp2" V 2943 4800 50  0000 C CNN
+F 1 "1" V 3034 4800 50  0000 C CNN
+F 2 "" V 3080 4800 50  0001 C CNN
+F 3 "~" H 3150 4800 50  0001 C CNN
+	1    3150 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 4800 3000 4800
+Wire Wire Line
+	3300 4800 3400 4800
+Connection ~ 3400 4800
+Wire Wire Line
+	3400 4800 3400 4850
+Text GLabel 2800 5500 2    50   Output ~ 0
+BandPass2
+Text GLabel 1600 5500 0    50   Input ~ 0
+In
+Wire Wire Line
+	2400 5550 2400 5500
+$Comp
+L Device:L Lbp2
+U 1 1 5DB427AA
+P 2250 5500
+F 0 "Lbp2" H 2206 5546 50  0000 R CNN
+F 1 "3.3m" H 2206 5455 50  0000 R CNN
+F 2 "" H 2250 5500 50  0001 C CNN
+F 3 "~" H 2250 5500 50  0001 C CNN
+	1    2250 5500
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:C Cbp2
+U 1 1 5DB427B0
+P 1850 5500
+F 0 "Cbp2" V 1598 5500 50  0000 C CNN
+F 1 "33u" V 1689 5500 50  0000 C CNN
+F 2 "" H 1888 5350 50  0001 C CNN
+F 3 "~" H 1850 5500 50  0001 C CNN
+	1    1850 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 5850 2250 5850
+Wire Wire Line
+	2400 5500 2800 5500
+$Comp
+L power:GND #PWR0111
+U 1 1 5DB427B8
+P 2250 5850
+F 0 "#PWR0111" H 2250 5600 50  0001 C CNN
+F 1 "GND" H 2255 5677 50  0000 C CNN
+F 2 "" H 2250 5850 50  0001 C CNN
+F 3 "" H 2250 5850 50  0001 C CNN
+	1    2250 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2250 5850
+Wire Wire Line
+	2250 5850 2400 5850
+$Comp
+L Device:R Rbp3
+U 1 1 5DB427C0
+P 2100 5700
+F 0 "Rbp3" H 2030 5654 50  0000 R CNN
+F 1 "1" H 2030 5745 50  0000 R CNN
+F 2 "" V 2030 5700 50  0001 C CNN
+F 3 "~" H 2100 5700 50  0001 C CNN
+	1    2100 5700
+	-1   0    0    1   
+$EndComp
+Connection ~ 2400 5500
+Wire Wire Line
+	1600 5500 1700 5500
+Wire Wire Line
+	2000 5500 2100 5500
+Connection ~ 2100 5500
+Wire Wire Line
+	2100 5500 2100 5550
+$Comp
+L Device:R Rbp4
+U 1 1 5DB476C9
+P 2400 5700
+F 0 "Rbp4" H 2330 5654 50  0000 R CNN
+F 1 "100" H 2330 5745 50  0000 R CNN
+F 2 "" V 2330 5700 50  0001 C CNN
+F 3 "~" H 2400 5700 50  0001 C CNN
+	1    2400 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C Cbp4
+U 1 1 5DB4D332
+P 4350 5750
+F 0 "Cbp4" H 4465 5796 50  0000 L CNN
+F 1 "33u" H 4465 5705 50  0000 L CNN
+F 2 "" H 4388 5600 50  0001 C CNN
+F 3 "~" H 4350 5750 50  0001 C CNN
+	1    4350 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5DB4D338
+P 4350 5900
+F 0 "#PWR0112" H 4350 5650 50  0001 C CNN
+F 1 "GND" H 4355 5727 50  0000 C CNN
+F 2 "" H 4350 5900 50  0001 C CNN
+F 3 "" H 4350 5900 50  0001 C CNN
+	1    4350 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3950 5550 0    50   Input ~ 0
+In
+Wire Wire Line
+	4300 5550 4350 5550
+Wire Wire Line
+	4350 5600 4350 5550
+Connection ~ 4350 5550
+Wire Wire Line
+	3950 5550 4000 5550
+Wire Wire Line
+	4350 5550 4750 5550
+$Comp
+L Device:C Chphz1
+U 1 1 5DB5CDFE
+P 3100 3500
+F 0 "Chphz1" V 2848 3500 50  0000 C CNN
+F 1 "330n" V 2939 3500 50  0000 C CNN
+F 2 "" H 3138 3350 50  0001 C CNN
+F 3 "~" H 3100 3500 50  0001 C CNN
+	1    3100 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R Rhphz1
+U 1 1 5DB5CE04
+P 3400 3750
+F 0 "Rhphz1" H 3470 3796 50  0000 L CNN
+F 1 "100" H 3470 3705 50  0000 L CNN
+F 2 "" V 3330 3750 50  0001 C CNN
+F 3 "~" H 3400 3750 50  0001 C CNN
+	1    3400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3500 3400 3500
+Wire Wire Line
+	3400 3500 3400 3600
+$Comp
+L power:GND #PWR0113
+U 1 1 5DB5CE0C
+P 3400 3900
+F 0 "#PWR0113" H 3400 3650 50  0001 C CNN
+F 1 "GND" H 3405 3727 50  0000 C CNN
+F 2 "" H 3400 3900 50  0001 C CNN
+F 3 "" H 3400 3900 50  0001 C CNN
+	1    3400 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3600 3500 2    50   Output ~ 0
+HighPass_HighZ
+Wire Wire Line
+	3600 3500 3400 3500
+Connection ~ 3400 3500
+Wire Wire Line
+	2550 3500 2950 3500
+Text GLabel 2550 3500 0    50   Input ~ 0
+In
+Text GLabel 4600 3500 0    50   Input ~ 0
+In
+Wire Wire Line
+	3850 6400 4000 6400
+Wire Wire Line
+	4000 6400 4000 6500
+$Comp
+L power:GND #PWR0114
+U 1 1 5DB619C2
+P 4000 6800
+F 0 "#PWR0114" H 4000 6550 50  0001 C CNN
+F 1 "GND" H 4005 6627 50  0000 C CNN
+F 2 "" H 4000 6800 50  0001 C CNN
+F 3 "" H 4000 6800 50  0001 C CNN
+	1    4000 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 6400 4000 6400
+Connection ~ 4000 6400
+$Comp
+L power:GND #PWR0115
+U 1 1 5DB619D7
+P 3150 6750
+F 0 "#PWR0115" H 3150 6500 50  0001 C CNN
+F 1 "GND" H 3155 6577 50  0000 C CNN
+F 2 "" H 3150 6750 50  0001 C CNN
+F 3 "" H 3150 6750 50  0001 C CNN
+	1    3150 6750
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 6400 0    50   Input ~ 0
+In
+Wire Wire Line
+	3100 6400 3150 6400
+Wire Wire Line
+	3150 6450 3150 6400
+Connection ~ 3150 6400
+Wire Wire Line
+	2750 6400 2800 6400
+Wire Wire Line
+	3150 6400 3550 6400
+$Comp
+L Device:R Rbp6
+U 1 1 5DAD85F2
+P 5200 5800
+F 0 "Rbp6" H 5270 5846 50  0000 L CNN
+F 1 "100" H 5270 5755 50  0000 L CNN
+F 2 "" V 5130 5800 50  0001 C CNN
+F 3 "~" H 5200 5800 50  0001 C CNN
+	1    5200 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C Cbp3
+U 1 1 5DAD8199
+P 4900 5550
+F 0 "Cbp3" V 4648 5550 50  0000 C CNN
+F 1 "330n" V 4739 5550 50  0000 C CNN
+F 2 "" H 4938 5400 50  0001 C CNN
+F 3 "~" H 4900 5550 50  0001 C CNN
+	1    4900 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R Rbp5
+U 1 1 5DB4D32C
+P 4150 5550
+F 0 "Rbp5" V 3943 5550 50  0000 C CNN
+F 1 "1" V 4034 5550 50  0000 C CNN
+F 2 "" V 4080 5550 50  0001 C CNN
+F 3 "~" H 4150 5550 50  0001 C CNN
+	1    4150 5550
+	0    1    1    0   
+$EndComp
+Text GLabel 4200 6400 2    50   Output ~ 0
+BandPass4
+$Comp
+L Device:R Rbp7
+U 1 1 5DB619BA
+P 4000 6650
+F 0 "Rbp7" H 4070 6696 50  0000 L CNN
+F 1 "1" H 4070 6605 50  0000 L CNN
+F 2 "" V 3930 6650 50  0001 C CNN
+F 3 "~" H 4000 6650 50  0001 C CNN
+	1    4000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Rbp8
+U 1 1 5DB619CB
+P 2950 6400
+F 0 "Rbp8" V 2743 6400 50  0000 C CNN
+F 1 "1" V 2834 6400 50  0000 C CNN
+F 2 "" V 2880 6400 50  0001 C CNN
+F 3 "~" H 2950 6400 50  0001 C CNN
+	1    2950 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C Cbp5
+U 1 1 5DB619B4
+P 3700 6400
+F 0 "Cbp5" V 3448 6400 50  0000 C CNN
+F 1 "33u" V 3539 6400 50  0000 C CNN
+F 2 "" H 3738 6250 50  0001 C CNN
+F 3 "~" H 3700 6400 50  0001 C CNN
+	1    3700 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C Cbp6
+U 1 1 5DB619D1
+P 3150 6600
+F 0 "Cbp6" H 3265 6646 50  0000 L CNN
+F 1 "33u" H 3265 6555 50  0000 L CNN
+F 2 "" H 3188 6450 50  0001 C CNN
+F 3 "~" H 3150 6600 50  0001 C CNN
+	1    3150 6600
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 4800 1    50   Input ~ 0
+in1
+Text GLabel 2100 5500 1    50   Input ~ 0
+in2
+Text GLabel 4350 5550 1    50   Input ~ 0
+in3
+Text GLabel 3150 6400 1    50   Input ~ 0
+in4
+$EndSCHEMATC

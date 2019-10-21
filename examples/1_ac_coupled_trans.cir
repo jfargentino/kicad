@@ -1,0 +1,19 @@
+.title 21.1 AC coupled transistor amplifier
+
+.tran 100n 5m
+
+V1 Vcc GND 12.0
+
+V2 in GND dc 0.0 ac 1.0 sin(0 1 1k)
+C1 base in 10uF
+
+R1 Vcc base 100k
+R2 base GND 24k
+R3 Vcc coll 3.9k
+R4 emet GND 1k
+
+Q1 coll base emet generic
+
+.model generic npn
+
+.end

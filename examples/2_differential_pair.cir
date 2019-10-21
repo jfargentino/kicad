@@ -1,0 +1,19 @@
+.title 21.2 Differential Pair
+
+V1 Vcc GND 12
+V2 GND Vee 12
+
+Vin in GND dc 0 ac 1 sin(0 1 1k)
+Rb1 in base1 1k
+Rb2 base2 GND 1k
+Q1 col1 base1 emet MOD1
+Q2 col2 base2 emet MOD1
+Rc1 Vcc col1 10k
+Rc2 Vcc col2 10k
+Re1 emet Vee 10k
+
+.MODEL MOD1 NPN BF=50 IS=1e-12 RB=100 CJC=.5pF TF=.6ns
+.TF V(5) Vin
+.AC dec 100 1 100Meg
+
+.end
